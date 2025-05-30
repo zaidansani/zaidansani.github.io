@@ -131,6 +131,12 @@ a {
   font-weight: bold;
 }
 
+.front-heading-small {
+   font-size: 0.85em;
+   animation: fadeIn 3s;
+   padding: 10px;
+}
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
