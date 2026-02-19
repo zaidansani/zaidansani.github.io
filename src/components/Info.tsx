@@ -13,7 +13,7 @@ function Strong({ children }: { children: ReactNode }) {
 export default function MainTitle() {
     return (
         <TemplateTab tabName="info">
-            <h1 className="text-xl/8 sm:text-2xl/16 md:text-4xl/20 lg:text-6xl/24 font-stretch-extra-expanded tracking-tighter">
+            <h1 className="text-xl/8 sm:text-2xl/16 md:text-4xl/20 lg:text-6xl/24 font-stretch-extra-expanded tracking-tighter bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent">
                 about me!
             </h1>
             <div className="flex flex-col gap-2 justify-start overflow-y-auto font-stretch-expanded font-light min-h-0 flex-1 text-xs sm:text-sm md:text-md lg:text-lg">

@@ -12,21 +12,25 @@ import {
     InfoIcon,
     SchoolIcon,
 } from "lucide-react";
+import { useState } from "react";
 
 export function App() {
+    const [activeTab, setActiveTab] = useState("home");
+
     return (
         <div className="w-screen h-screen overflow-hidden flex items-center justify-center">
-            <Card className="h-30/40 w-30/40 p-4 sm:p-6 md:p-8 bg-white flex justify-bottom">
+            <Card className="h-[75vh] w-[75vw] p-4 sm:p-6 md:p-8 xl:p-12 2xl:p-16 bg-white flex justify-bottom">
                 <Tabs
                     defaultValue="home"
                     className="h-full flex flex-col"
+                    onValueChange={setActiveTab}
                 >
                     <MainTitle />
                     <Info />
-                    <Education />
-                    <Experience />
-                    <Projects />
-                    <TabsList className="mt-2 grid w-full grid-cols-5 shrink-0 bg-gray-50">
+                    <Education key={`education-${activeTab}`} />
+                    <Experience key={`experience-${activeTab}`} />
+                    <Projects key={`projects-${activeTab}`} />
+                    <TabsList className="mt-2 grid w-full grid-cols-5 shrink-0 bg-gray-50 2xl:h-20 [&_svg]:2xl:size-8">
                         <TabsTrigger value="home">
                             <HomeIcon />
                         </TabsTrigger>

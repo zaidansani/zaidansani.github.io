@@ -13,7 +13,7 @@ export interface CardTabEntry {
 }
 
 const cardClass =
-    "p-4 shrink-0 snap-start w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-11px)] tracking-tighter flex flex-col cursor-pointer hover:bg-main transition-colors";
+    "p-4 2xl:p-6 shrink-0 snap-start w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-11px)] tracking-tighter flex flex-col cursor-pointer hover:bg-main transition-colors";
 
 function SummaryCard({
     title,
@@ -27,13 +27,13 @@ function SummaryCard({
             className={cardClass}
             onClick={onClick}
         >
-            <CardTitle className="font-stretch-extra-expanded flex flex-col gap-2">
-                <h1 className="text-sm/6 sm:text-md/6 md:text-lg/6 lg:text-xl/6">
+            <CardTitle className="font-stretch-extra-expanded flex flex-col gap-2 ">
+                <h1 className="text-sm/6 sm:text-md/6 md:text-lg/6 lg:text-xl/6 2xl:text-3xl/10">
                     {title}
                 </h1>
-                <h2 className="font-light italic">{subtitle}</h2>
+                <h2 className="font-light italic 2xl:text-xl">{subtitle}</h2>
             </CardTitle>
-            <div className="text-sm font-light flex flex-col flex-1">
+            <div className="text-sm 2xl:text-lg font-light flex flex-col flex-1">
                 <div className="mt-auto">
                     {institution && <p>{institution}</p>}
                     {period && <p className="italic">{period}</p>}
@@ -53,7 +53,7 @@ function DetailCard({
 }) {
     return (
         <Card
-            className={`${cardClass} overflow-y-auto`}
+            className={`${cardClass} overflow-y-auto bg-gradient-to-br from-blue-50 to-purple-50 `}
             onClick={onClick}
         >
             <p className="text-xs font-stretch-expanded text-center">{title}</p>
@@ -83,10 +83,10 @@ export default function CardTab({
     return (
         <TemplateTab tabName={tabName}>
             <div className="flex flex-col mb-2">
-                <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-stretch-extra-expanded tracking-tighter">
+                <h1 className="bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent text-xl sm:text-2xl md:text-4xl lg:text-6xl 2xl:text-8xl font-stretch-extra-expanded tracking-tighter">
                     {heading}
                 </h1>
-                <p className="text-xs italic font-light">
+                <p className="text-xs 2xl:text-base italic font-light">
                     click on a card for more details
                 </p>
             </div>

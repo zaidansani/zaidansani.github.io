@@ -65,12 +65,16 @@
 
 @layer base {
     body {
-        @apply text-foreground font-base bg-background;
+        @apply text-foreground font-base;
         background-image:
-            linear-gradient(oklch(0% 0 0 / 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, oklch(0% 0 0 / 0.1) 1px, transparent 1px);
-        background-size: 40px 40px;
-        background-color: oklch(100% 0 0);
+            linear-gradient(oklch(0% 0 0 / 0.15) 1px, transparent 1px),
+            linear-gradient(90deg, oklch(0% 0 0 / 0.15) 1px, transparent 1px),
+            linear-gradient(135deg, #dbeafe 0%, #f3e8ff 100%);
+        background-size:
+            40px 40px,
+            40px 40px,
+            100% 100%;
+        background-color: #1c1917;
     }
 
     h1,
