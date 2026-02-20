@@ -2,6 +2,7 @@
 
 import TemplateTab from "@/components/TemplateTab";
 import { Card, CardTitle } from "@/components/ui/card";
+import { Tag, type TagEntry } from "@/components/Utilities";
 import { useEffect, useState } from "react";
 
 export interface CardTabEntry {
@@ -10,6 +11,7 @@ export interface CardTabEntry {
     institution?: string;
     period?: string;
     children?: React.ReactNode;
+    tags?: TagEntry[];
 }
 
 const cardClass =
@@ -20,6 +22,7 @@ function SummaryCard({
     subtitle,
     institution,
     period,
+    tags,
     onClick,
 }: Omit<CardTabEntry, "children"> & { onClick?: () => void }) {
     return (
@@ -33,6 +36,19 @@ function SummaryCard({
                 </h1>
                 <h2 className="font-light italic 2xl:text-xl">{subtitle}</h2>
             </CardTitle>
+
+            <div className="flex-1 overflow-y-auto max-h-0 sm:max-h-none">
+                {tags && tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1 content-start">
+                        {tags.map((tag, i) => (
+                            <Tag
+                                key={i}
+                                {...tag}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
             <div className="text-sm 2xl:text-lg font-light flex flex-col flex-1">
                 <div className="mt-auto">
                     {institution && <p>{institution}</p>}

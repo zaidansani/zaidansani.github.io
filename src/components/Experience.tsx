@@ -1,11 +1,25 @@
 import type { CardTabEntry } from "@/components/CardTab";
 import CardTab from "@/components/CardTab";
+import { UnorderedList } from "@/components/Utilities";
 
 const entries: CardTabEntry[] = [
     {
         title: "Data Analyst Intern",
         institution: "Centre for Strategic InfoComm Technologies",
         period: "May 25 - Aug 25",
+        tags: [
+            {
+                name: "InspectAI",
+                category: { name: "data", type: "technology" },
+            },
+            {
+                name: "LLM evaluation",
+                category: {
+                    name: "data",
+                    type: "skill",
+                },
+            },
+        ],
         children: (
             <div className="flex flex-col gap-2">
                 <div className="text-sm font-light">
@@ -21,6 +35,26 @@ const entries: CardTabEntry[] = [
         subtitle: "Cybersecurity",
         institution: "A*STAR Institute for InfoComm Research",
         period: "Sep 20 - Feb 21",
+        tags: [
+            {
+                name: "Malware Analysis",
+                category: { name: "security", type: "skill" },
+            },
+            {
+                name: "Ghidra",
+                category: {
+                    name: "security",
+                    type: "technology",
+                },
+            },
+            {
+                name: "Machine Learning",
+                category: {
+                    name: "data",
+                    type: "skill",
+                },
+            },
+        ],
         children: (
             <div className="flex flex-col gap-2">
                 <div className="text-sm font-light">
@@ -42,16 +76,52 @@ const entries: CardTabEntry[] = [
         subtitle: "CS1101S/CS2030S",
         institution: "National University of Singapore",
         period: "Aug 24 - Apr 26",
+        tags: [
+            {
+                name: "OOP",
+                category: {
+                    name: "swe",
+                    type: "skill",
+                },
+            },
+            {
+                name: "FP",
+                category: {
+                    name: "swe",
+                    type: "skill",
+                },
+            },
+            {
+                name: "Java",
+                category: {
+                    name: "swe",
+                    type: "technology",
+                },
+            },
+            {
+                name: "Source (JS derivative)",
+                category: {
+                    name: "swe",
+                    type: "technology",
+                },
+            },
+            {
+                name: "Teaching",
+                category: {
+                    type: "skill",
+                },
+            },
+        ],
         children: (
             <div className="flex flex-col gap-2">
                 <div className="text-sm">
                     Honour List of Student Tutors for 2024-2025
                 </div>
                 <div className="text-sm font-light">
-                    <ul className="font-light text-xs list-disc pl-4">
+                    <UnorderedList>
                         <li>CS1101S: Programming Methodology</li>
                         <li>CS2030S: Programming Methodology II</li>
-                    </ul>
+                    </UnorderedList>
                 </div>
                 <div className="text-sm font-light">
                     Planned and executed tutorial/laboratory sessions for up to

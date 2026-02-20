@@ -1,5 +1,6 @@
-import CardTab from "@/components/CardTab";
 import type { CardTabEntry } from "@/components/CardTab";
+import CardTab from "@/components/CardTab";
+import { UnorderedList } from "@/components/Utilities";
 
 const entries: CardTabEntry[] = [
     {
@@ -7,6 +8,20 @@ const entries: CardTabEntry[] = [
         subtitle: "Computer Science",
         institution: "National University of Singapore",
         period: "Aug 23 - Aug 26",
+        tags: [
+            {
+                name: "Software Engineering",
+                category: {
+                    name: "swe",
+                },
+            },
+            {
+                name: "Dissertation",
+                category: {
+                    name: "research",
+                },
+            },
+        ],
         children: (
             <div className="flex flex-col gap-2">
                 <div>
@@ -17,14 +32,14 @@ const entries: CardTabEntry[] = [
                 </div>
                 <div>
                     <p className="font-light text-sm">Achievements</p>
-                    <ul className="font-light text-xs list-disc pl-4">
+                    <UnorderedList>
                         <li>Honour List of Student Tutors (2024-2025)</li>
                         <li>Best Project (STEPS' 2025) for GraphRAG</li>
-                    </ul>
+                    </UnorderedList>
                 </div>
                 <div>
                     <p className="font-light text-sm">Coursework</p>
-                    <ul className="font-light text-xs list-disc pl-4">
+                    <UnorderedList>
                         <li>
                             Designed and created a machine learning
                             visualisation web application as a learning
@@ -39,7 +54,7 @@ const entries: CardTabEntry[] = [
                             mathematics, with a focus on Human Computer
                             Interaction.
                         </li>
-                    </ul>
+                    </UnorderedList>
                 </div>
             </div>
         ),
@@ -49,30 +64,54 @@ const entries: CardTabEntry[] = [
         subtitle: "Information Security and Forensics",
         institution: "Ngee Ann Polytechnic",
         period: "Apr 18 - Apr 21",
+        tags: [
+            {
+                name: "Malware Analysis",
+                category: {
+                    name: "security",
+                    type: "skill",
+                },
+            },
+            {
+                name: "Digital Forensics",
+                category: {
+                    name: "security",
+                    type: "skill",
+                },
+            },
+            {
+                name: "SIEM",
+                category: {
+                    name: "security",
+                    type: "skill",
+                },
+            },
+        ],
+
         children: (
             <div className="flex flex-col gap-2">
                 <p className="font-medium text-sm">GPA: 3.99/4</p>
                 <div>
                     <p className="font-light text-sm">Achievements</p>
-                    <ul className="font-light text-xs list-disc pl-4">
+                    <UnorderedList>
                         <li>Valedictorian for the academic year 2021/22</li>
                         <li>
                             Silver Medalist for second most outstanding
                             performance
                         </li>
                         <li>A*STAR Science Award recipient</li>
-                    </ul>
+                    </UnorderedList>
                 </div>
                 <div>
                     <p className="font-light text-sm">Coursework</p>
-                    <ul className="font-light text-xs list-disc pl-4">
+                    <UnorderedList>
                         <li>
                             Designed a SIEM for SOHO using Splunk for Capstone
                         </li>
                         <li>
                             Analysed malware using static and dynamic analysis
                         </li>
-                    </ul>
+                    </UnorderedList>
                 </div>
             </div>
         ),
@@ -81,6 +120,11 @@ const entries: CardTabEntry[] = [
 
 export default function Education({ activeTab }: { activeTab?: string }) {
     return (
-        <CardTab tabName="education" heading="education" entries={entries} activeTab={activeTab} />
+        <CardTab
+            tabName="education"
+            heading="education"
+            entries={entries}
+            activeTab={activeTab}
+        />
     );
 }

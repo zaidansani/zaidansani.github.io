@@ -1,13 +1,5 @@
 import TemplateTab from "@/components/TemplateTab";
-import type { ReactNode } from "react";
-
-function Strong({ children }: { children: ReactNode }) {
-    return (
-        <strong className="font-medium font-stretch-extra-expanded">
-            {children}
-        </strong>
-    );
-}
+import { Strong } from "./Utilities";
 
 export default function MainTitle() {
     return (

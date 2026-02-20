@@ -1,4 +1,5 @@
 import TemplateTab from "@/components/TemplateTab";
+import { Link } from "@/components/Utilities";
 
 export default function MainTitle() {
     return (
@@ -17,9 +18,16 @@ export default function MainTitle() {
                     SANI
                 </h1>
             </div>
-            <p className="font-stretch-expanded tracking-wider font-light text-xs/4 sm:text-sm/4 md:text-md/4 lg:text-lg/4 2xl:text-2xl/8">
+            <p className="font-stretch-expanded tracking-wider font-light text-xs sm:text-sm md:text-md lg:text-lg 2xl:text-2xl leading-none">
                 aspiring software engineer; final year compsci undergraduate @
-                nus
+                nus. <br />
+                <Link href="https://zaidansani.github.io/thevault">
+                    nus notes
+                </Link>{" "}
+                //{" "}
+                <Link href="https://github.com/zaidansani/helpsheets">
+                    helpsheet repo
+                </Link>
             </p>
         </TemplateTab>
     );
