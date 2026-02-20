@@ -62,12 +62,13 @@ const entries: CardTabEntry[] = [
     },
 ];
 
-export default function Experience() {
+export default function Experience({ activeTab }: { activeTab?: string }) {
     return (
         <CardTab
             tabName="experience"
             heading="experience"
             entries={entries}
+            activeTab={activeTab}
         />
     );
 }

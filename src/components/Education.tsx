@@ -79,8 +79,8 @@ const entries: CardTabEntry[] = [
     },
 ];
 
-export default function Education() {
+export default function Education({ activeTab }: { activeTab?: string }) {
     return (
-        <CardTab tabName="education" heading="education" entries={entries} />
+        <CardTab tabName="education" heading="education" entries={entries} activeTab={activeTab} />
     );
 }

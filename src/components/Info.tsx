@@ -28,6 +28,11 @@ export default function MainTitle() {
                     personalised knickknacks that make my life marginally
                     easier, and i generally pick up skillsets around that.
                 </p>
+                <p>
+                    outside the professional capacity, you'll find me either
+                    making music/doing covers, watching and playing football or
+                    fps esports or just enjoying a good show!
+                </p>
             </div>
         </TemplateTab>
     );

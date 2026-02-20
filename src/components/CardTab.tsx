@@ -2,7 +2,7 @@
 
 import TemplateTab from "@/components/TemplateTab";
 import { Card, CardTitle } from "@/components/ui/card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface CardTabEntry {
     title: string;
@@ -13,7 +13,7 @@ export interface CardTabEntry {
 }
 
 const cardClass =
-    "p-4 2xl:p-6 shrink-0 snap-start w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-11px)] tracking-tighter flex flex-col cursor-pointer hover:bg-main transition-colors";
+    "p-4 2xl:p-6 shrink-0 snap-start w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-11px)] tracking-tighter flex flex-col cursor-pointer bg-grid";
 
 function SummaryCard({
     title,
@@ -72,6 +72,7 @@ interface CardTabProps {
     heading: string;
     entries: CardTabEntry[];
     wip?: boolean;
+    activeTab?: string;
 }
 
 export default function CardTab({
@@ -79,8 +80,13 @@ export default function CardTab({
     heading,
     entries,
     wip,
+    activeTab,
 }: CardTabProps) {
     const [expanded, setExpanded] = useState<number | null>(null);
+
+    useEffect(() => {
+        setExpanded(null);
+    }, [activeTab]);
 
     return (
         <TemplateTab tabName={tabName}>
