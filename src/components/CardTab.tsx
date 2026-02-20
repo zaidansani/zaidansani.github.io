@@ -37,7 +37,7 @@ function SummaryCard({
                 <h2 className="font-light italic 2xl:text-xl">{subtitle}</h2>
             </CardTitle>
 
-            <div className="flex-1 overflow-y-auto max-h-0 sm:max-h-none">
+            <div className="flex-1 overflow-y-auto">
                 {tags && tags.length > 0 && (
                     <div className="flex flex-wrap gap-1 content-start">
                         {tags.map((tag, i) => (
