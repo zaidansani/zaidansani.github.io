@@ -87,7 +87,7 @@ export default function CardTab({
                     {heading}
                 </h1>
                 <p className="text-xs 2xl:text-base italic font-light">
-                    click on a card for more details
+                    click on a card for more details // scroll for more
                 </p>
             </div>
 

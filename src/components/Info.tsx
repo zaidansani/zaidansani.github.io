@@ -1,6 +1,5 @@
 import TemplateTab from "@/components/TemplateTab";
 import type { ReactNode } from "react";
-import { SocialIcon } from "react-social-icons";
 
 function Strong({ children }: { children: ReactNode }) {
     return (
@@ -29,16 +28,6 @@ export default function MainTitle() {
                     personalised knickknacks that make my life marginally
                     easier, and i generally pick up skillsets around that.
                 </p>
-            </div>
-            <div className="py-2 flex flex-row gap-2 items-center">
-                <SocialIcon
-                    url="https://linkedin.com/in/mzaidanbsani"
-                    bgColor="#222222"
-                />
-                <SocialIcon
-                    url="https://github.com/zaidansani"
-                    bgColor="#222222"
-                />
             </div>
         </TemplateTab>
     );
