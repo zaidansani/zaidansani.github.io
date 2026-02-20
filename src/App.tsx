@@ -52,8 +52,8 @@ export function App() {
                     </Tabs>
                 </Card>
                 <Card className="h-[5vh] w-[75vw] bg-white flex justify-center items-center">
-                    <CardContent className="flex flex-row items-center gap-2 font-light italic text-xs font-stretch-ultra-expanded tracking-tighter">
-                        <span className="hidden sm:inline">
+                    <CardContent className="flex flex-row items-center gap-2 font-light italic text-xs font-stretch-expanded tracking-wider">
+                        <span className="">
                             designed by{" "}
                             <a
                                 className="hover:underline bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent"
@@ -75,7 +75,7 @@ export function App() {
                                 style={{ height: "1.5em", width: "1.5em" }}
                             />
                         </div>
-                        <span className="hidden sm:inline">
+                        <span className="hidden md:inline">
                             inspired and using{" "}
                             <a
                                 className="hover:underline"
