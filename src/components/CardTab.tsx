@@ -57,7 +57,9 @@ function DetailCard({
             onClick={onClick}
         >
             <p className="text-xs font-stretch-expanded text-center">{title}</p>
-            <div className="flex-1 overflow-y-auto py-1">{children}</div>
+            <div className="flex-1 overflow-y-auto py-1 tracking-wider">
+                {children}
+            </div>
             <p className="text-xs font-stretch-expanded text-center">
                 {subtitle}
             </p>

@@ -12,10 +12,10 @@ function Strong({ children }: { children: ReactNode }) {
 export default function MainTitle() {
     return (
         <TemplateTab tabName="info">
-            <h1 className="text-xl/8 sm:text-2xl/16 md:text-4xl/20 lg:text-6xl/24 font-stretch-extra-expanded tracking-tighter bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent">
+            <h1 className="bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent text-xl sm:text-2xl md:text-4xl lg:text-6xl 2xl:text-8xl font-stretch-extra-expanded tracking-tighter mb-2">
                 about me!
             </h1>
-            <div className="flex flex-col gap-2 justify-start overflow-y-auto font-stretch-expanded font-light min-h-0 flex-1 text-xs sm:text-sm md:text-md lg:text-lg">
+            <div className="flex flex-col gap-2 justify-start overflow-y-auto tracking-wide font-stretch-expanded font-light min-h-0 flex-1 text-xs sm:text-sm md:text-md lg:text-lg leading-[1.2em]">
                 <p>
                     i'm a 24 year old with a educational background within{" "}
                     <Strong>computer science</Strong> spanning{" "}

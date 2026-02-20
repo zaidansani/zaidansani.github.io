@@ -21,7 +21,7 @@ export function App() {
     return (
         <div className="w-screen h-screen overflow-hidden flex justify-center items-center">
             <div className="flex flex-col items-center gap-2">
-                <Card className="h-[75vh] w-[75vw] p-4 sm:p-6 md:p-8 xl:p-12 2xl:p-16 bg-white flex justify-bottom">
+                <Card className="h-[75vh] w-[75vw] p-2 sm:p-4 xl:p-6 bg-white flex justify-bottom">
                     <Tabs
                         defaultValue="home"
                         className="h-full flex flex-col"

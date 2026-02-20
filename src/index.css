@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -61,11 +62,14 @@
     --shadow-shadow: var(--shadow);
     --font-weight-base: 500;
     --font-weight-heading: 700;
+    --font-family-base: "Archivo", sans-serif;
+    --tracking-tightest: -0.1em;
 }
 
 @layer base {
     body {
         @apply text-foreground font-base;
+        font-family: var(--font-family-base);
         background-image:
             linear-gradient(oklch(0% 0 0 / 0.15) 1px, transparent 1px),
             linear-gradient(90deg, oklch(0% 0 0 / 0.15) 1px, transparent 1px),

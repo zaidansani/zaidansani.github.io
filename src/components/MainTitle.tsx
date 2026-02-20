@@ -11,13 +11,13 @@ export default function MainTitle() {
                         className="size-full rounded-full object-cover"
                     />
                 </div>
-                <h1 className="text-3xl/8 sm:text-6xl/16 md:text-7xl/20 lg:text-8xl/24 2xl:text-[10rem]/[10rem] font-stretch-ultra-expanded tracking-tighter bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent">
+                <h1 className="text-3xl/8 sm:text-6xl/16 md:text-7xl/20 lg:text-8xl/24 2xl:text-[10rem]/[10rem] font-stretch-ultra-expanded tracking-tightest font-bold bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent">
                     ZAIDAN
                     <br />
                     SANI
                 </h1>
             </div>
-            <p className="font-stretch-expanded tracking-loose font-light text-xs/4 sm:text-sm/4 md:text-md/4 lg:text-lg/4 2xl:text-2xl/8">
+            <p className="font-stretch-expanded tracking-wider font-light text-xs/4 sm:text-sm/4 md:text-md/4 lg:text-lg/4 2xl:text-2xl/8">
                 aspiring software engineer; final year compsci undergraduate @
                 nus
             </p>
