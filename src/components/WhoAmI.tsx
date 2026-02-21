@@ -69,7 +69,7 @@ export default function WhoAmI({ onComplete }: { onComplete: () => void }) {
     return (
         <div className="w-screen h-screen flex justify-center items-center">
             <Card className="w-[75vw] p-6 bg-white flex flex-col justify-center items-start font-mono">
-                <div className="flex items-center gap-1 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-800 w-full">
+                <div className="flex flex-wrap items-center gap-x-1 gap-y-2 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-800 w-full">
                     <span className="text-blue-700 font-semibold select-none mr-2">
                         $
                     </span>
@@ -80,7 +80,7 @@ export default function WhoAmI({ onComplete }: { onComplete: () => void }) {
                         />
                     )}
                     {phase === "loading" && (
-                        <Progress value={progress} className="ml-4 flex-1" />
+                        <Progress value={progress} className="ml-4 flex-1 min-w-24" />
                     )}
                 </div>
             </Card>
