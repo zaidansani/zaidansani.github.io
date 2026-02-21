@@ -3,6 +3,7 @@ import Experience from "@/components/Experience";
 import Info from "@/components/Info";
 import MainTitle from "@/components/MainTitle";
 import Projects from "@/components/Projects";
+import WhoAmI from "@/components/WhoAmI";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "@/components/Utilities";
@@ -17,8 +18,17 @@ import { useEffect, useState } from "react";
 import { SocialIcon } from "react-social-icons";
 
 export function App() {
+    const [launched, setLaunched] = useState(false);
+    const [visible, setVisible] = useState(false);
     const [activeTab, setActiveTab] = useState("home");
     const tabs = ["education", "experience", "home", "info", "projects"];
+
+    function handleComplete() {
+        setLaunched(true);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => setVisible(true));
+        });
+    }
 
     useEffect(() => {
         function handleKeyDown(e: KeyboardEvent) {
@@ -33,8 +43,14 @@ export function App() {
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, []);
 
+    if (!launched) {
+        return <WhoAmI onComplete={handleComplete} />;
+    }
+
     return (
-        <div className="w-screen h-screen overflow-hidden flex justify-center items-center">
+        <div
+            className={`w-screen h-screen overflow-hidden flex justify-center items-center transition-opacity duration-1000 ${visible ? "opacity-100" : "opacity-0"}`}
+        >
             <div className="flex flex-col items-center gap-2">
                 <Card className="h-[75vh] w-[75vw] p-4 sm:p-6 xl:p-8 bg-white flex justify-bottom">
                     <Tabs
