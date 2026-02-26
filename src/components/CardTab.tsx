@@ -31,10 +31,12 @@ function SummaryCard({
             onClick={onClick}
         >
             <CardTitle className="font-stretch-extra-expanded flex flex-col gap-2 ">
-                <h1 className="text-sm/6 sm:text-md/6 md:text-lg/6 lg:text-xl/6 2xl:text-3xl/10">
+                <h1 className="text-sm sm:text-md md:text-lg lg:text-xl 2xl:text-3xl leading-[0.9]">
                     {title}
                 </h1>
-                <h2 className="font-light italic 2xl:text-xl">{subtitle}</h2>
+                <h2 className="font-light italic 2xl:text-xl leading-[0.9]">
+                    {subtitle}
+                </h2>
             </CardTitle>
 
             <div className="flex-1 overflow-y-auto">
@@ -49,12 +51,12 @@ function SummaryCard({
                     </div>
                 )}
             </div>
-            <div className="text-sm 2xl:text-lg font-light flex flex-col flex-1">
-                <div className="mt-auto">
+            {(institution || period) && (
+                <div className="text-sm 2xl:text-lg font-light mt-2 leading-[0.9]">
                     {institution && <p>{institution}</p>}
                     {period && <p className="italic">{period}</p>}
                 </div>
-            </div>
+            )}
         </Card>
     );
 }
@@ -107,7 +109,7 @@ export default function CardTab({
     return (
         <TemplateTab tabName={tabName}>
             <div className="flex flex-col mb-2">
-                <h1 className="bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent text-xl sm:text-2xl md:text-4xl lg:text-6xl 2xl:text-8xl font-stretch-extra-expanded tracking-tighter">
+                <h1 className="bg-gradient-to-br from-blue-800 to-purple-500 bg-clip-text text-transparent text-xl sm:text-2xl md:text-4xl lg:text-6xl 2xl:text-8xl leading-[0.8] font-stretch-extra-expanded tracking-tighter">
                     {heading}
                 </h1>
                 <p className="text-xs 2xl:text-base italic font-light">

@@ -25,7 +25,7 @@ const entries: CardTabEntry[] = [
         children: (
             <div className="flex flex-col gap-2">
                 <div>
-                    <p className="font-medium text-sm">GPA: 4.81/4</p>
+                    <p className="font-medium text-sm">GPA: 4.81/5</p>
                     <p className="text-xs">
                         (on track for Honours (Highest Distinction)
                     </p>
